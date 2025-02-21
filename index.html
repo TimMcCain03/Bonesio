@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#container {
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-start; /* Align children to the top */
+    align-items: center; /* Center children horizontally */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+    position: relative;
+}
+
+#header {
+    width: 100%;
+    height: 25vh;
+    color: white;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial;
+    font-size: 10px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    transform-origin: top; /* Scale from the top */
+}
+
+#header pre {
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#cow {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    width: 100%; /* Full width of the container */
+    position: absolute;
+    top: 25vh; /* Position the cow div below the header div */
+}
+
+#cow pre {
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Full width of the container */
+    font-size: 5px;
+}
+
+#links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center;
+    width: 100%; /* Full width of the container */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: 70vh; /* Position the links div below the cow div */
+}
+
+#links p {
+    width: 100%; /* Full width of the container */
+}
+
+#links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Add some horizontal margin between links */
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background-color:rgb(100, 91, 73);text-align:center">
+    <div id="container">
+        <div id="header">
+            <pre>                                                                     
+                ,----..            ,--.                                  ,----..    
+     ,---,.    /   /   \         ,--.'|    ,---,.  .--.--.      ,---,   /   /   \   
+   ,'  .'  \  /   .     :    ,--,:  : |  ,'  .' | /  /    '. ,`--.' |  /   .     :  
+ ,---.' .' | .   /   ;.  \,`--.'`|  ' :,---.'   ||  :  /`. / |   :  : .   /   ;.  \ 
+ |   |  |: |.   ;   /  ` ;|   :  :  | ||   |   .';  |  |--`  :   |  '.   ;   /  ` ; 
+ :   :  :  /;   |  ; \ ; |:   |   \ | ::   :  |-,|  :  ;_    |   :  |;   |  ; \ ; | 
+ :   |    ; |   :  | ; | '|   : '  '; |:   |  ;/| \  \    `. '   '  ;|   :  | ; | ' 
+ |   :     \.   |  ' ' ' :'   ' ;.    ;|   :   .'  `----.   \|   |  |.   |  ' ' ' : 
+ |   |   . |'   ;  \; /  ||   | | \   ||   |  |-,  __ \  \  |'   :  ;'   ;  \; /  | 
+ '   :  '; | \   \  ',  / '   : |  ; .''   :  ;/| /  /`--'  /|   |  ' \   \  ',  /  
+ |   |  | ;   ;   :    /  |   | '`--'  |   |    \'--'.     / '   :  |  ;   :    /   
+ |   :   /     \   \ .'   '   : |      |   :   .'  `--'---'  ;   |.'    \   \ .'    
+ |   | ,'       `---`     ;   |.'      |   | ,'              '---'       `---`      
+ `----'                   '---'        `----'                                       
+            </pre>
+        </div>
+        <div id="cow">
+            <pre>                                                                                           
+             ......                                                                                
+           :.:::::::::-:.                                                                           
+     -:=+*=:-::::::::..:*----*#**+++++*####*--+*+****=    .=++=++++.          ...                  
+    %@@%  .=-.....:....:=%%*-==#***#*#***++*###****#######**+++++++++++==+++**+==++=...... .        
+@@@@@@@@*=-:...:.::...:-@%@@@@@@%######****######**************####*###########*+++++++....+*      
+@@@@@@@#*+::::.:....:::+@@@@@@@@@@%#######********#*****#*****###########*###%%##********.+*###    
+  @@@@%@@+=-:::...::::-@%@@@@@@@@@#########*#***#********##**#******###**###%%%%#####******-##%%#  
+          =+=:....:-+*@*%%%@@@%%############+**#**######**###***#**#******##%%%%%%%%##########%%@  
+           +-:...::=+==+@%@@@%%%%%#%%#%###########**##########**##****#*#+#%%+-%#-::#%%#%#%##%%%   
+           --....--=-=-*@@@@@@@%%%%%%%%#%%######+######*########*#######*-::#=:::::::::=%%%%%%%@   
+           :-.....:--:-@@@@@@@@%@%%%%%%%%@%%#######################*=#*##-:::::::::::::::#%%%@%@   
+           ::.....:---%@@@@@@@@%%%%%%%%%%%%%%%%%%##########%%###%###*.:#%%*=:::::..:::.::%@@%%%@   
+            ......::-+@@@@@@@@@%@%%%%%%%%%%%%%%%%%%%%%%%%%%##%%%%%%#%#-%#%%%::::::..::::%@#%%%#    
+            ---=-:::+@@@@@@@@@@@%%%@@@%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%#+%%%-::::::::::=#--::=%%    
+           .++===#+:=%@@@@@@@@@@@%@@@@%%%%%@@@@@@@@%%#%+:%*##%@%%%%%%%%=#==::::::::::-%%::::=@@    
+            =####*+-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*+%#@@%%@@@@@@@#@:-::::::::--+%*-:::::=.    
+                 *+@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@----:::--====#@%:::::::     
+                 :=@@@@@@@@@@@@@@@@@@@@@@@@@@@--=%@@@@@@@@@@@@@@@@@@@@@----::---=++++=-:::::::     
+                  =%=+###+++=--==@@@@@@@@@%@+---+@@@@@@@@#@@@@@@@@@@@#=---::--:---===--::::::-     
+                  ---+%*++++-=---#@@@@@##=%--:-:#@@@%=%@@@@#+++=%==*@%=--=*###%--+=-==---:::-=     
+                  ---==+=+++==+:::=@@%:::.:----===#**--=+*@@@+++===+%==+*+*++++*%++=--==-----=     
+                  +-=======---=-:::%%%::::-=-====+++++++++%*++++*****++*####***##@#==---+==--=     
+                   ==-====+====-:::*=::=+=++**+**##******************          ##%#+=-::::---+     
+                    =======++*+-::%%@::+**     ##########%#%%%%#                ****=----::-*=     
+                     ==++====+*-::-#=:.                 **+*#                    ++++=-::--:-      
+                       ==++***+-::--+-                                           =+===--:---:      
+                         +++**-::--%@@                                            +++=-:::-::      
+                          --=+::-*%@@                                              ++==--:-::      
+                          :::-.:=%@@@                                               ==-----.       
+                          :.:..:%@@@                                                 =--:-=-       
+                          +:::+=%%@@                                                 ===-=+-       
+                           +-+##@@%                                                   =-----       
+                           *+-##@@                                                    =----        
+                           =--=-:-                                                    =---:        
+                           ---:::                                                     --:::        
+                          ::--.::                                                    --::.:        
+                          :.:..:.                                                    =::::         
+                         @@@-::::                                                    ---::         
+                        @@@@@@@@@=                                                  @@@@@=         
+                             @@@@                                                      @@          
+  </pre>
+        </div>
+        <div id="links">
+            <pre>
+<a href="https://www.youtube.com/@bonesioband" target="_blank">BONESIO</a>-------------------------------------------------------
+------------<a href="https://open.spotify.com/artist/2OxFLXmhhvusNP3KLrJbWy?flow_ctx=aa00199d-f059-462c-8b97-f9bb35767460%" target="_blank">SPOTIFY</a>-------------------------------------------
+-------------------------<a href="https://www.instagram.com/bonesio__/" target="_blank">INSTAGRAM</a>----------------------------
+---------------------------------------<a href="https://music.apple.com/us/artist/bonesio/1698180188" target="_blank">APPLE MUSIC</a>------------
+-------------------------------------------------------<a href="https://www.tiktok.com/@b0nesio?is_from_webapp=1&sender_device=pc" target="_blank">TIK TOK</a>
+            </pre>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
